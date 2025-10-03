@@ -15,23 +15,24 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f8f9fa;
             color: #333;
-            line-height: 1.3;
-            padding: 10px;
+            line-height: 1.2;
+            padding: 5mm;
         }
         
         .container {
-            max-width: 700px;
+            width: 210mm;
+            min-height: 297mm;
             margin: 0 auto;
             background: white;
-            border-radius: 5px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         
         /* Header Styles */
         .header {
             background: #1e3c72;
             color: white;
-            padding: 15px 20px;
+            padding: 4mm 6mm;
             text-align: center;
         }
         
@@ -39,14 +40,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
+            margin-bottom: 2mm;
         }
         
         .logo-img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            border-radius: 5px;
+            width: 12mm;
+            height: 12mm;
+            margin-right: 3mm;
             background: white;
             display: flex;
             align-items: center;
@@ -58,156 +58,163 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 4px;
         }
         
         .company-name {
-            font-size: 20px;
+            font-size: 7mm;
             font-weight: bold;
         }
         
         .tagline {
-            font-size: 12px;
+            font-size: 3mm;
             opacity: 0.9;
         }
         
         /* Form Styles */
         .form-content {
-            padding: 20px;
+            padding: 5mm;
         }
         
         .section {
-            margin-bottom: 15px;
-            padding: 15px;
+            margin-bottom: 4mm;
+            padding: 3mm;
             background: #f8f9fa;
-            border-radius: 5px;
-            border-left: 3px solid #1e3c72;
+            border-left: 2px solid #1e3c72;
+            page-break-inside: avoid;
         }
         
         .section-title {
-            font-size: 16px;
+            font-size: 4mm;
             font-weight: bold;
             color: #1e3c72;
-            margin-bottom: 12px;
+            margin-bottom: 3mm;
+            padding-bottom: 1mm;
+            border-bottom: 1px solid #dee2e6;
         }
         
         .form-group {
-            margin-bottom: 12px;
+            margin-bottom: 2mm;
         }
         
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-        
-        @media (max-width: 600px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
+            gap: 3mm;
+            margin-bottom: 2mm;
         }
         
         label {
             display: block;
-            margin-bottom: 4px;
+            margin-bottom: 1mm;
             font-weight: 600;
             color: #495057;
-            font-size: 13px;
+            font-size: 3mm;
         }
         
         input, select {
             width: 100%;
-            padding: 8px 10px;
+            padding: 2mm;
             border: 1px solid #ced4da;
-            border-radius: 3px;
-            font-size: 13px;
+            border-radius: 2px;
+            font-size: 3mm;
             background: white;
         }
         
-        /* Membership Options */
-        .membership-options {
+        /* Membership Options - Compact Layout */
+        .membership-compact {
             display: grid;
-            gap: 8px;
+            grid-template-columns: 1fr 1fr;
+            gap: 2mm;
+            margin-bottom: 2mm;
         }
         
         .membership-option {
             background: white;
             border: 1px solid #dee2e6;
-            border-radius: 4px;
-            padding: 12px;
+            border-radius: 2px;
+            padding: 2mm;
+            font-size: 3mm;
         }
         
         .option-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 6px;
+            margin-bottom: 1mm;
         }
         
         .option-title {
             font-weight: 600;
-            font-size: 14px;
             color: #1e3c72;
         }
         
         .option-price {
             font-weight: bold;
-            font-size: 14px;
             color: #28a745;
         }
         
         .option-duration {
             color: #6c757d;
-            font-size: 12px;
-            margin-bottom: 6px;
+            font-size: 2.5mm;
+            margin-bottom: 1mm;
         }
         
-        /* Payment Methods */
+        /* Payment Section - Side by Side with Membership */
+        .payment-membership-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3mm;
+            margin-bottom: 2mm;
+        }
+        
+        .payment-section {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 2px;
+            padding: 2mm;
+        }
+        
+        .payment-title {
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 2mm;
+            font-size: 3mm;
+        }
+        
         .payment-methods {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-        }
-        
-        @media (max-width: 500px) {
-            .payment-methods {
-                grid-template-columns: 1fr;
-            }
+            gap: 1mm;
         }
         
         .payment-method {
-            text-align: center;
-            padding: 8px;
-            border: 1px solid #dee2e6;
-            border-radius: 3px;
-            background: white;
-            font-size: 13px;
+            display: flex;
+            align-items: center;
+            padding: 1mm;
+            font-size: 2.5mm;
         }
         
         /* Terms Section */
         .terms-section {
             background: white;
-            border-radius: 4px;
-            padding: 12px;
             border: 1px solid #dee2e6;
+            border-radius: 2px;
+            padding: 3mm;
+            font-size: 2.5mm;
         }
         
         .terms-title {
             font-weight: bold;
             color: #dc3545;
-            margin-bottom: 8px;
-            font-size: 14px;
+            margin-bottom: 2mm;
         }
         
         .terms-list {
             list-style: none;
-            font-size: 12px;
         }
         
         .terms-list li {
-            padding: 4px 0;
+            padding: 0.5mm 0;
             border-bottom: 1px dashed #dee2e6;
-            color: #495057;
         }
         
         .terms-list li:last-child {
@@ -218,14 +225,8 @@
         .signature-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 12px;
-        }
-        
-        @media (max-width: 500px) {
-            .signature-section {
-                grid-template-columns: 1fr;
-            }
+            gap: 5mm;
+            margin-top: 3mm;
         }
         
         .signature-box {
@@ -234,30 +235,29 @@
         
         .signature-line {
             border-bottom: 1px solid #495057;
-            margin: 20px 0 6px;
-            padding: 0 10px;
+            margin: 8mm 0 1mm;
         }
         
         .signature-label {
             font-weight: 600;
             color: #495057;
-            font-size: 12px;
+            font-size: 3mm;
         }
         
         /* Form Actions */
         .form-actions {
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
-            padding-top: 15px;
+            margin-top: 4mm;
+            padding-top: 3mm;
             border-top: 1px solid #dee2e6;
         }
         
         .btn {
-            padding: 8px 16px;
+            padding: 2mm 4mm;
             border: none;
-            border-radius: 3px;
-            font-size: 13px;
+            border-radius: 2px;
+            font-size: 3mm;
             font-weight: 600;
             cursor: pointer;
         }
@@ -275,17 +275,16 @@
         /* Amount Fields */
         .amount-fields {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 2mm;
         }
         
         .highlight {
             background: #fff3cd;
             border: 1px solid #ffeaa7;
-            border-radius: 3px;
-            padding: 8px;
-            margin: 8px 0;
-            font-size: 12px;
+            border-radius: 2px;
+            padding: 2mm;
+            margin: 2mm 0;
+            font-size: 2.5mm;
         }
         
         .required::after {
@@ -296,11 +295,11 @@
         /* Radio button styling */
         input[type="radio"] {
             width: auto;
-            margin-right: 6px;
+            margin-right: 1mm;
         }
         
         .radio-group {
-            margin-bottom: 6px;
+            margin-bottom: 1mm;
         }
         
         .radio-group label {
@@ -309,7 +308,6 @@
             margin-bottom: 0;
             cursor: pointer;
             font-weight: normal;
-            font-size: 13px;
         }
 
         /* Print Styles */
@@ -322,7 +320,8 @@
             .container {
                 box-shadow: none;
                 margin: 0;
-                max-width: none;
+                width: 100%;
+                min-height: auto;
             }
             
             .btn {
@@ -330,8 +329,19 @@
             }
             
             .form-actions {
-                border-top: none;
-                padding-top: 0;
+                display: none;
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 210mm) {
+            body {
+                padding: 2mm;
+            }
+            
+            .container {
+                width: 100%;
+                min-height: auto;
             }
         }
     </style>
@@ -366,7 +376,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name" class="required">Full Name</label>
-                            <input type="text" id="name" placeholder="Enter full name" required>
+                            <input type="text" id="name" placeholder="Full name" required>
                         </div>
                         
                         <div class="form-group">
@@ -383,7 +393,7 @@
                         
                         <div class="form-group">
                             <label for="city" class="required">City</label>
-                            <input type="text" id="city" placeholder="Enter city" required>
+                            <input type="text" id="city" placeholder="City" required>
                         </div>
                     </div>
                     
@@ -393,87 +403,90 @@
                     </div>
                 </div>
 
-                <!-- Membership Type -->
+                <!-- Membership & Payment Side by Side -->
                 <div class="section">
-                    <div class="section-title">MEMBERSHIP TYPE</div>
+                    <div class="section-title">MEMBERSHIP & PAYMENT</div>
                     
-                    <div class="membership-options">
-                        <div class="membership-option">
-                            <div class="option-header">
-                                <div class="option-title">Beginner (Silver)</div>
-                                <div class="option-price">PKR 200$</div>
+                    <div class="payment-membership-row">
+                        <!-- Membership Options -->
+                        <div class="membership-compact">
+                            <div class="membership-option">
+                                <div class="option-header">
+                                    <div class="option-title">Beginner (Silver)</div>
+                                    <div class="option-price">PKR 200$</div>
+                                </div>
+                                <div class="option-duration">For new traders</div>
+                                <div class="radio-group">
+                                    <input type="radio" name="membership" id="beginner" value="beginner" required>
+                                    <label for="beginner">Select</label>
+                                </div>
                             </div>
-                            <div class="option-duration">Perfect for new traders</div>
-                            <div class="radio-group">
-                                <input type="radio" name="membership" id="beginner" value="beginner" required>
-                                <label for="beginner">Select this option</label>
+                            
+                            <div class="membership-option">
+                                <div class="option-header">
+                                    <div class="option-title">Advance (Gold)</div>
+                                    <div class="option-price">PKR 200$</div>
+                                </div>
+                                <div class="option-duration">2 months premium</div>
+                                <div class="radio-group">
+                                    <input type="radio" name="membership" id="advanced" value="advanced">
+                                    <label for="advanced">Select</label>
+                                </div>
+                            </div>
+                            
+                            <div class="membership-option">
+                                <div class="option-header">
+                                    <div class="option-title">Investor (Platinum)</div>
+                                    <div class="option-price">PKR 250$</div>
+                                </div>
+                                <div class="option-duration">Premium benefits</div>
+                                <div class="radio-group">
+                                    <input type="radio" name="membership" id="signature" value="signature">
+                                    <label for="signature">Select</label>
+                                </div>
                             </div>
                         </div>
                         
-                        <div class="membership-option">
-                            <div class="option-header">
-                                <div class="option-title">Advance (Gold)</div>
-                                <div class="option-price">PKR 200$</div>
+                        <!-- Payment Details -->
+                        <div class="payment-section">
+                            <div class="payment-title">PAYMENT DETAILS</div>
+                            
+                            <div class="amount-fields">
+                                <div class="form-group">
+                                    <label for="advance">Advance (Rs)</label>
+                                    <input type="number" id="advance" placeholder="Advance amount">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="balance">Balance (Rs)</label>
+                                    <input type="number" id="balance" placeholder="Balance amount">
+                                </div>
                             </div>
-                            <div class="option-duration">Upto 2 months premium</div>
-                            <div class="radio-group">
-                                <input type="radio" name="membership" id="advanced" value="advanced">
-                                <label for="advanced">Select this option</label>
-                            </div>
-                        </div>
-                        
-                        <div class="membership-option">
-                            <div class="option-header">
-                                <div class="option-title">Advance + Signature</div>
-                                <div class="option-price">PKR 250$</div>
-                            </div>
-                            <div class="option-duration">Investor/Platinum benefits</div>
-                            <div class="radio-group">
-                                <input type="radio" name="membership" id="signature" value="signature">
-                                <label for="signature">Select this option</label>
+                            
+                            <div class="form-group">
+                                <label class="required">Payment Method</label>
+                                <div class="payment-methods">
+                                    <div class="payment-method">
+                                        <input type="radio" name="payment" id="online" value="online" required>
+                                        <label for="online">Online</label>
+                                    </div>
+                                    
+                                    <div class="payment-method">
+                                        <input type="radio" name="payment" id="cash" value="cash">
+                                        <label for="cash">Cash</label>
+                                    </div>
+                                    
+                                    <div class="payment-method">
+                                        <input type="radio" name="payment" id="pos" value="pos">
+                                        <label for="pos">POS</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="highlight">
                         <strong>Note:</strong> Booking Fee Rs. 10,000 (non-refundable) mandatory for seat lock.
-                    </div>
-                </div>
-
-                <!-- Payment Details -->
-                <div class="section">
-                    <div class="section-title">PAYMENT DETAILS</div>
-                    
-                    <div class="amount-fields">
-                        <div class="form-group">
-                            <label for="advance">Advance Amount (Rs)</label>
-                            <input type="number" id="advance" placeholder="Advance amount">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="balance">Balance Amount (Rs)</label>
-                            <input type="number" id="balance" placeholder="Balance amount">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="required">Payment Method</label>
-                        <div class="payment-methods">
-                            <div class="payment-method">
-                                <input type="radio" name="payment" id="online" value="online" required>
-                                <label for="online">Online</label>
-                            </div>
-                            
-                            <div class="payment-method">
-                                <input type="radio" name="payment" id="cash" value="cash">
-                                <label for="cash">Cash</label>
-                            </div>
-                            
-                            <div class="payment-method">
-                                <input type="radio" name="payment" id="pos" value="pos">
-                                <label for="pos">POS</label>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -511,9 +524,21 @@
                     </div>
                 </div>
 
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-reset">Reset Form</button>
+                    <button type="submit" class="btn btn-submit">Submit Application</button>
+                </div>
+            </form>
         </div>
     </div>
 
-  
+    <script>
+        // Set today's date as default
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').value = today;
+        });
+    </script>
 </body>
 </html>
