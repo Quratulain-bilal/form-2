@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Deals - Membership Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.3;
+            padding: 10px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styles */
+        .header {
+            background: #1e3c72;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 5px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid white;
+        }
+        
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+        
+        .company-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .tagline {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        /* Form Styles */
+        .form-content {
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #1e3c72;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 12px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+            color: #495057;
+            font-size: 13px;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ced4da;
+            border-radius: 3px;
+            font-size: 13px;
+            background: white;
+        }
+        
+        /* Membership Options */
+        .membership-options {
+            display: grid;
+            gap: 8px;
+        }
+        
+        .membership-option {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 12px;
+        }
+        
+        .option-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        
+        .option-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #1e3c72;
+        }
+        
+        .option-price {
+            font-weight: bold;
+            font-size: 14px;
+            color: #28a745;
+        }
+        
+        .option-duration {
+            color: #6c757d;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        
+        /* Payment Methods */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        
+        @media (max-width: 500px) {
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .payment-method {
+            text-align: center;
+            padding: 8px;
+            border: 1px solid #dee2e6;
+            border-radius: 3px;
+            background: white;
+            font-size: 13px;
+        }
+        
+        /* Terms Section */
+        .terms-section {
+            background: white;
+            border-radius: 4px;
+            padding: 12px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .terms-title {
+            font-weight: bold;
+            color: #dc3545;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .terms-list {
+            list-style: none;
+            font-size: 12px;
+        }
+        
+        .terms-list li {
+            padding: 4px 0;
+            border-bottom: 1px dashed #dee2e6;
+            color: #495057;
+        }
+        
+        .terms-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Signature Section */
+        .signature-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 12px;
+        }
+        
+        @media (max-width: 500px) {
+            .signature-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .signature-box {
+            text-align: center;
+        }
+        
+        .signature-line {
+            border-bottom: 1px solid #495057;
+            margin: 20px 0 6px;
+            padding: 0 10px;
+        }
+        
+        .signature-label {
+            font-weight: 600;
+            color: #495057;
+            font-size: 12px;
+        }
+        
+        /* Form Actions */
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 3px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .btn-reset {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-submit {
+            background: #1e3c72;
+            color: white;
+        }
+        
+        /* Amount Fields */
+        .amount-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 3px;
+            padding: 8px;
+            margin: 8px 0;
+            font-size: 12px;
+        }
+        
+        .required::after {
+            content: " *";
+            color: #dc3545;
+        }
+        
+        /* Radio button styling */
+        input[type="radio"] {
+            width: auto;
+            margin-right: 6px;
+        }
+        
+        .radio-group {
+            margin-bottom: 6px;
+        }
+        
+        .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 0;
+            cursor: pointer;
+            font-weight: normal;
+            font-size: 13px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                margin: 0;
+                max-width: none;
+            }
+            
+            .btn {
+                display: none;
+            }
+            
+            .form-actions {
+                border-top: none;
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-container">
+                <div class="logo-img">
+                    <img src="web.jpg" alt="Forex Deals Logo" onerror="this.style.display='none'; this.parentNode.innerHTML='FD';">
+                </div>
+                <div>
+                    <div class="company-name">FOREX DEALS</div>
+                    <div class="tagline">Professional Trading & Investment Platform</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Content -->
+        <div class="form-content">
+            <form id="membershipForm">
+                <!-- Personal Information -->
+                <div class="section">
+                    <div class="section-title">PERSONAL INFORMATION</div>
+                    
+                    <div class="form-group">
+                        <label for="date" class="required">Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="required">Full Name</label>
+                            <input type="text" id="name" placeholder="Enter full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cnic" class="required">CNIC Number</label>
+                            <input type="text" id="cnic" placeholder="XXXXX-XXXXXXX-X" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="required">Email Address</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="city" class="required">City</label>
+                            <input type="text" id="city" placeholder="Enter city" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="required">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="03XX-XXXXXXX" required>
+                    </div>
+                </div>
+
+                <!-- Membership Type -->
+                <div class="section">
+                    <div class="section-title">MEMBERSHIP TYPE</div>
+                    
+                    <div class="membership-options">
+                        <div class="membership-option">
+                            <div class="option-header">
+                                <div class="option-title">Beginner (Silver)</div>
+                                <div class="option-price">PKR 2,000</div>
+                            </div>
+                            <div class="option-duration">Perfect for new traders</div>
+                            <div class="radio-group">
+                                <input type="radio" name="membership" id="beginner" value="beginner" required>
+                                <label for="beginner">Select this option</label>
+                            </div>
+                        </div>
+                        
+                        <div class="membership-option">
+                            <div class="option-header">
+                                <div class="option-title">Advance (Gold)</div>
+                                <div class="option-price">PKR 2,000</div>
+                            </div>
+                            <div class="option-duration">Upto 2 months premium</div>
+                            <div class="radio-group">
+                                <input type="radio" name="membership" id="advanced" value="advanced">
+                                <label for="advanced">Select this option</label>
+                            </div>
+                        </div>
+                        
+                        <div class="membership-option">
+                            <div class="option-header">
+                                <div class="option-title">Advance + Signature</div>
+                                <div class="option-price">PKR 25,000</div>
+                            </div>
+                            <div class="option-duration">Investor/Platinum benefits</div>
+                            <div class="radio-group">
+                                <input type="radio" name="membership" id="signature" value="signature">
+                                <label for="signature">Select this option</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight">
+                        <strong>Note:</strong> Booking Fee Rs. 10,000 (non-refundable) mandatory for seat lock.
+                    </div>
+                </div>
+
+                <!-- Payment Details -->
+                <div class="section">
+                    <div class="section-title">PAYMENT DETAILS</div>
+                    
+                    <div class="amount-fields">
+                        <div class="form-group">
+                            <label for="advance">Advance Amount (Rs)</label>
+                            <input type="number" id="advance" placeholder="Advance amount">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="balance">Balance Amount (Rs)</label>
+                            <input type="number" id="balance" placeholder="Balance amount">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">Payment Method</label>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" name="payment" id="online" value="online" required>
+                                <label for="online">Online</label>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <input type="radio" name="payment" id="cash" value="cash">
+                                <label for="cash">Cash</label>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <input type="radio" name="payment" id="pos" value="pos">
+                                <label for="pos">POS</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="section">
+                    <div class="section-title">TERMS & CONDITIONS</div>
+                    
+                    <div class="terms-section">
+                        <div class="terms-title">Important Terms:</div>
+                        <ul class="terms-list">
+                            <li>Booking Fee Rs. 10,000 (non-refundable) mandatory</li>
+                            <li>Balance must be cleared before program starts</li>
+                            <li>Forex Deals charges only service fee</li>
+                            <li>Non-payment = suspension/termination</li>
+                            <li>Terms subject to change</li>
+                            <li>By signing, you agree to all terms</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Signatures -->
+                <div class="section">
+                    <div class="section-title">SIGNATURES</div>
+                    
+                    <div class="signature-section">
+                        <div class="signature-box">
+                            <div class="signature-line"></div>
+                            <div class="signature-label">Forex Deals Representative</div>
+                        </div>
+                        
+                        <div class="signature-box">
+                            <div class="signature-line"></div>
+                            <div class="signature-label">Candidate Signature</div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+  
+</body>
+</html>
